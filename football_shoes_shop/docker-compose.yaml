@@ -1,0 +1,19 @@
+version: "3"
+services:
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=football_shoes_shop_database
+    volumes:
+      - "./users_postgres_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=username@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    ports:
+      - "8080:80"

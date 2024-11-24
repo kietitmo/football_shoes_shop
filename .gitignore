@@ -1,0 +1,4 @@
+/**/__pycache__/
+/.venv/
+/football_shoes_shop/users_postgres_data/
+/**/.env
